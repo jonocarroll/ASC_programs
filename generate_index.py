@@ -32,7 +32,7 @@ def list_files(service):
         page_token = resp.get("nextPageToken")
         if not page_token:
             break
-    return sorted(files, key=lambda f: f["name"].lower())
+    return sorted(files, key=lambda f: f["name"].lower(), reverse=True)
 
 def file_url(f):
     mime = f["mimeType"]
@@ -54,7 +54,7 @@ def generate_html(files):
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document Library</title>
+  <title>Adelaide Stoicism Community Programs</Title>
   <style>
     body {{ font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }}
     h1 {{ font-size: 1.4rem; }}
@@ -67,7 +67,7 @@ def generate_html(files):
   </style>
 </head>
 <body>
-  <h1>Document Library</h1>
+  <h1>Adelaide Stoicism Community Programs</h1>
   <table>
     <thead><tr><th>File</th><th>Modified</th></tr></thead>
     <tbody>
