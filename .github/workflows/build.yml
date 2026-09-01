@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Mondays at midnight UTC
+    - cron: '30 9 * * 6'  # Saturdays at (around) 7pm Adelaide
   push:
     branches: [main]
   workflow_dispatch:
